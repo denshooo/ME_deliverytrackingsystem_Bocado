@@ -1,0 +1,18 @@
+[
+  {
+    "id": "1",
+    "tracking_number": "BOC-C454392C",
+    "customer_name": "Bon",
+    "destination": "Bohol",
+    "delivery_date": "2026-10-13",
+    "status": "Pending"
+  },
+  {
+    "id": "2",
+    "tracking_number": "BOC-250E7573",
+    "customer_name": "fern",
+    "destination": "leyte",
+    "delivery_date": "2026-10-13",
+    "status": "Pending"
+  }
+]

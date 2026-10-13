@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Delivery Tracking</title>
+  <link rel="stylesheet" href="/styles.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <main class="container">
+    <h1>Delivery Tracking System</h1>
+
+    <div class="form-grid">
+      <section>
+        <h2>Add a delivery</h2>
+        <form id="delivery-form">
+          <label>Customer name<input name="customer_name" required></label>
+          <label>Destination<input name="destination" required></label>
+          <label>Delivery date<input name="delivery_date" type="date" required></label>
+          <button type="submit">Add delivery</button>
+        </form>
+        <p id="form-message" role="status"></p>
+      </section>
+
+      <section>
+        <h2>Find by ID</h2>
+        <form id="search-form" class="search-form">
+          <label class="sr-only" for="delivery-id">Delivery ID</label>
+          <input id="delivery-id" placeholder="Enter delivery ID" required>
+          <button type="submit">Search</button>
+        </form>
+        <p id="search-message" role="status"></p>
+        <div class="table-wrap lookup-table-wrap">
+          <table>
+            <thead>
+              <tr><th>Field</th><th>Delivery details</th></tr>
+            </thead>
+            <tbody id="search-result" aria-live="polite"></tbody>
+          </table>
+        </div>
+      </section>
+    </div>
+
+    <section>
+      <div class="list-heading">
+        <h2>All deliveries</h2>
+        <button id="refresh-button" type="button" class="secondary">Refresh</button>
+      </div>
+      <p id="list-message" role="status"></p>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>ID</th><th>Tracking number</th><th>Customer</th><th>Destination</th><th>Delivery date</th><th>Status</th><th>Action</th></tr>
+          </thead>
+          <tbody id="delivery-list"></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
